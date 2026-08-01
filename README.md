@@ -12,6 +12,7 @@ the [frontend assembler](https://github.com/YutakaX17/advanced-hello-world-fe).
 - reusable stylesheet through the `./styles.css` export
 - message submission and success/error feedback
 - API base URL support for `/api/v1/messages`
+- a typed `ApplicationModule` contract for independently installed features
 
 ## Requirements
 
