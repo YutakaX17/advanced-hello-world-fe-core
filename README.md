@@ -1,18 +1,20 @@
 # Advanced Hello World Frontend Core
 
-Reusable React and TypeScript library containing the application shell, message
-form, typed API client, responsive styles, and SweetAlert2 success feedback. It
-does not provide an HTML entry point or production web server; those belong to
-the [frontend assembler](https://github.com/YutakaX17/advanced-hello-world-fe).
+Reusable React and TypeScript library containing the application shell, shared
+layout styles, and typed feature-module contracts. Feature pages and API clients
+live in independently versioned packages. This repository does not provide an
+HTML entry point or production web server; those belong to the
+[frontend assembler](https://github.com/YutakaX17/advanced-hello-world-fe).
 
 ## Exported behavior
 
-- `AppShell` and `HelloWorldPage`
-- `createMessageApi` typed API client
+- `AppShell`
 - reusable stylesheet through the `./styles.css` export
-- message submission and success/error feedback
-- API base URL support for `/api/v1/messages`
 - a typed `ApplicationModule` contract for independently installed features
+
+The Hello World page, message API client, form styles, and success feedback are
+provided by
+[the messages module](https://github.com/YutakaX17/advanced-hello-world-fe-messages).
 
 ## Requirements
 
@@ -67,11 +69,9 @@ API and stylesheet:
 ```tsx
 import {
   AppShell,
-  createMessageApi,
+  defineModule,
 } from "@yutakax17/advanced-hello-world-fe-core";
 import "@yutakax17/advanced-hello-world-fe-core/styles.css";
-
-const api = createMessageApi("/api");
 ```
 
 React and React DOM are peer dependencies and must be supplied by the consuming
@@ -99,4 +99,5 @@ See [CONTRIBUTING.md](CONTRIBUTING.md), [SECURITY.md](SECURITY.md), and the
 - [Backend core](https://github.com/YutakaX17/advanced-hello-world-be-core)
 - [Backend assembler](https://github.com/YutakaX17/advanced-hello-world-be)
 - [Frontend assembler](https://github.com/YutakaX17/advanced-hello-world-fe)
+- [Frontend messages module](https://github.com/YutakaX17/advanced-hello-world-fe-messages)
 - [All-in-one distribution](https://github.com/YutakaX17/advanced-hello-world)
