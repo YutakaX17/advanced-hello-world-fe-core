@@ -13,6 +13,14 @@ export interface ApplicationModule {
   readonly routes: readonly ApplicationRoute[];
 }
 
+export interface ModuleContext {
+  readonly apiBaseUrl: string;
+}
+
+export type ApplicationModuleFactory = (
+  context: ModuleContext,
+) => Readonly<ApplicationModule>;
+
 const moduleId = /^[a-z][a-z0-9-]*$/;
 
 export function defineModule(
