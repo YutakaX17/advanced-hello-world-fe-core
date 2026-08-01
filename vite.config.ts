@@ -7,7 +7,12 @@ export default defineConfig({
     react(),
     dts({
       insertTypesEntry: true,
-      exclude: ["src/**/*.test.ts", "src/**/*.test.tsx", "src/test-setup.ts"],
+      exclude: [
+        "src/**/*.test.ts",
+        "src/**/*.test.tsx",
+        "src/test-setup.ts",
+        "vite.config.ts",
+      ],
     }),
   ],
   test: {
